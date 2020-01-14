@@ -16,7 +16,19 @@ if ('serviceWorker' in navigator) {
 
 // place your code below
 
+const textarea = document.querySelector('.form__textarea--js') ;
+ 
+const save = document.querySelector('.form__button--save-js') ;
 
-console.log(`Hello world!`);
+save.addEventListener('click', (e) => {
+  e.preventDefault();
+  localStorage.setItem('textarea', textarea.value);
+ });
 
+const  loadButton = document.querySelector('.form__button--load-js'); 
 
+loadButton.addEventListener ('click', (e) => {
+  e.preventDefault();
+  textarea.value = localStorage.getItem('textarea')
+}
+ )

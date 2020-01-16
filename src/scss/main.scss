@@ -18,10 +18,12 @@ html {
   min-height: 100vh;
   background-image: $suprem ;
   background-repeat: round;
+  
 }
 .main {
   max-width: 544px;
   width: 100%;
+  padding: 12 px;
   &__header {
     font-weight: 600;
     font-size: 48px;
@@ -55,16 +57,22 @@ html {
     }
   }
   &__textarea {
+    padding: 12px;
     width: 100%;
-    border: 1px solid palegoldenrod;
+    border: 1px none  ;
     border-radius: 8px;
     font-family: $OS-font;
     font-weight: bold;
     color: white;
-    min-height: 50vh;
-  
+    min-height: 50vh; 
+    background: transparentize($color: #000000, $amount: 0.1); 
+     
+   
+    
   }
+
 }
+ 
  
  
  

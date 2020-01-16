@@ -1,7 +1,6 @@
 @import "_normalize";
 @import "_variables";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-
 html {
   box-sizing: border-box;
 }
@@ -13,68 +12,59 @@ html {
 }
 
 .body {
-  color: $yellow;
   display: flex;
-  align-items: center;
   justify-content: center;
-  
-  background: red;
+  align-items: center;
+  min-height: 100vh;
+  background-image: $suprem ;
+  background-repeat: round;
 }
 .main {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
+  max-width: 544px;
+  width: 100%;
+  &__header {
+    font-weight: 600;
+    font-size: 48px;
+  }
 }
+ 
+
 .form {
   &__actions {
     display: flex;
     justify-content: space-between;
   }
   &__button {
-    border-radius: 6px;
-    border-style: hidden;
-    background: #ededed;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-      "Helvetica Neue", sans-serif;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 20vh;
+    min-height: 32px;
+   background: transparent;
+    
+    &--save { 
+   background-image: url(https://fontmeme.com/permalink/200116/f0ce026998224e857c3d55457ad1fd6d.png);   
+    background-repeat:no-repeat ;
+    background-position: center;
+    } 
     &--load {
-      width: 184px;
-      height: 37px;
-      left: 832px;
-      top: 99px;
-    }
-    &--save {
-      width: 184px;
-      height: 37px;
-      left: 832px;
-      top: 99px;
+      background-image: url(https://fontmeme.com/permalink/200116/8e72a1cef2e123b812dfaeb06b2f093b.png);   
+      background-repeat:no-repeat ;
+      background-position: center;
     }
   }
-
   &__textarea {
-    width: 656px;
-    height: 374px;
-    left: 392px;
-    top: 176px;
+    width: 100%;
+    border: 1px solid palegoldenrod;
     border-radius: 8px;
-    padding: 8px;
-  }
-  @media  (max-width: 654px) {
-    .main {
-       background: yellow;
-    }
-    .form {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      max-width: 1vr;
-      max-height: 1vr;
-       
-      &__textarea {
-        max-width: 408px;
-        height: 100vh;
-        max-height: 1282px;
-         background: yellow;
-      }
-    }
+    font-family: $OS-font;
+    font-weight: bold;
+    color: white;
+    min-height: 50vh;
+  
   }
 }
+ 
+ 
+ 

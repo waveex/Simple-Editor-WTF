@@ -15,7 +15,7 @@ if ('serviceWorker' in navigator) {
 }
 
 // place your code below
-
+const clowd = document.querySelector ('.clowd__message--js');
 const textarea = document.querySelector('.form__textarea--js') ;
  
 const save = document.querySelector('.form__button--save-js') ;
@@ -23,6 +23,8 @@ const save = document.querySelector('.form__button--save-js') ;
 save.addEventListener('click', (e) => {
   e.preventDefault();
   localStorage.setItem('textarea', textarea.value);
+  var element = document.getElementById(clowd);
+   save.parentNode.removeChild(clowd);
  });
 
 const  loadButton = document.querySelector('.form__button--load-js'); 
@@ -31,4 +33,4 @@ loadButton.addEventListener ('click', (e) => {
   e.preventDefault();
   textarea.value = localStorage.getItem('textarea')
 }
- )
+)
